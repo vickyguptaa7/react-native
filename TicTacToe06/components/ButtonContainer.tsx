@@ -3,20 +3,23 @@ import {StyleSheet, View} from 'react-native';
 import {twMerge} from 'tailwind-merge';
 type ButtonProps = PropsWithChildren<{
   children: JSX.Element;
-  className: string;
+  style: string;
+  containerStyle?: string;
 }>;
 
-export default function Buttons({
+export default function ButtonContainer({
   children,
-  className,
+  style,
+  containerStyle,
 }: ButtonProps): JSX.Element {
   return (
-    <View className="flex items-center justify-center ">
+    <View
+      className={twMerge('flex items-center justify-center', containerStyle)}>
       {children}
       <View
         className={twMerge(
-          'absolute w-full h-full rounded-md -z-30 ',
-          className,
+          'absolute w-full h-5 rounded-md -z-30 ',
+          style,
         )}></View>
     </View>
   );

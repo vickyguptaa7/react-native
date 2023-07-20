@@ -1,4 +1,4 @@
-For tailwindcss use nativewind see the docs
+For tailwindcss version 3.3.2 only use nativewind see the docs
 
 For form validation use yup
 
